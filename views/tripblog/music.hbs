@@ -1,0 +1,12 @@
+{{#each music}}
+    <div class="">
+        <div class="blog-card">
+            <a href="/blog/music/{{this._id}}">
+                <img src="/images/{{this.blogImage1}}" alt="">
+                <h2>{{this.title}}</h2>
+                <h4>{{this.body}}</h4>
+                <p>{{formatDate this.createdAt 'MMMM Do YYYY, h:mm:ss a'}}</p>
+            </a>
+        </div>
+    </div>
+{{/each}}

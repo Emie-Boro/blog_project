@@ -1,0 +1,22 @@
+<form action="/contact/send" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="">
+    </div>
+    <div>
+        <label for="category">Category</label>
+        <select name="category" id="blog-category">
+            <option value="enquiry" selected>Enquiry</option>
+            <option value="advert_placement">Advert Placement</option>
+            <option value="complaint">Complaint</option>
+            <option value="suggestion">Suggestion</option>
+            <option value="commendtion">Commendation</option>
+            <option value="others">Others</option>
+        </select>
+    </div>
+    <div>
+        <label for="message"></label>
+        <textarea name="message" id="" cols="30" rows="10"></textarea>
+    </div>
+    <input type="submit" value="Send">
+</form>

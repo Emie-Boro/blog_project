@@ -1,0 +1,28 @@
+<script src="/script/blog_add.js"></script>
+<form action="/blog/add" method="post" enctype="multipart/form-data">
+    <div>
+        <input type="text" name="title" id="" placeholder="Title">
+    </div>
+    <div>
+        <select name="category" id="blog-category">
+            <option value="category">Category</option>
+            <option value="politics">politics</option>
+            <option value="education">education</option>
+            <option value="health">health</option>
+            <option value="economy">economy</option>
+            <option value="technology">technology</option>
+            <option value="entertainment">entertainment</option>
+            <option value="sport">sport</option>
+            <option value="food">food</option>
+            <option value="politics">politics</option>
+        </select>
+    </div>
+    <div>
+        <input type="file" name="blogImage1" id="">
+        <input type="file" name="blogImage2" id="">
+    </div>
+    <div>
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+    </div>
+    <input type="submit" value="Submit">
+</form>

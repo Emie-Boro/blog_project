@@ -1,0 +1,62 @@
+<style>
+    *{
+        margin:0;
+    }
+    .main-layout-navbar ul {
+       background-color: brown;
+       
+    }
+    .main-layout-navbar li {
+        display: inline-block;
+        padding: 15px;
+
+    }
+    .main-layout-navbar a{
+        text-decoration: none;
+        color: white;
+    }
+    .main-layout-navbar a:hover{
+        color: lightcoral;
+    }
+</style>
+<nav class="main-layout-navbar">
+    <div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/politics">Politics</a></li>
+            <li><a href="/blog/economy">Economy</a></li>
+            <li><a href="/blog/entertainment">Entertainment</a></li>
+            <li><a href="/blog/food">Food</a></li>
+            <li><a href="/blog/health">Health</a></li>
+            <li><a href="/blog/education">Education</a></li>
+            <li><a href="/blog/movie">Movie</a></li>
+            <li><a href="/blog/music">Music</a></li>
+            <li><a href="/blog/technology">Technology</a></li>
+        </ul>
+    </div>
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="/">Home</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </div>
+</nav>
+<script>
+    function myFunction() {
+        document.getElementById('myDropdown').classList.toggle('show')
+    }
+
+    window.onclick = function(event) {
+        if(!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName('dropdown-content');
+            var i;
+            for(i=0;i < dropdowns.length;i++) {
+                var openDropdown = dropdowns[i];
+                if(openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show')
+                }
+            }
+        }
+    }
+</script>

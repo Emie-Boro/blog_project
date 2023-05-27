@@ -1,0 +1,24 @@
+<a href="/blog/add">New Post</a>
+<h1>{{{username}}}</h1>
+
+{{#each blog}}
+    <div class="blog-wrapper">
+        <div class="blog-card">
+            <a href="/blog/{{this.category}}/{{this._id}}">
+                <h2>{{this.title}}</h2>
+                <p>{{ formatDate this.createdAt 'MMMM Do YYYY, h:mm:ss a'}}</p>
+            </a>
+            <div>
+                <button><a href="/blog/edit/{{this._id}}">Edit</a></button>
+            </div>
+            <form method="POST" action="/blog/{{this._id}}" id="delete-form">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit" id="delete_btn">Delete</button>
+            </form>
+        </div>
+    </div>
+{{/each}}
+
+<div>
+    <a href="/user/logout">Logout</a>
+</div>

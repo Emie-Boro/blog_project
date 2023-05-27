@@ -27,10 +27,10 @@ const storage = multer.diskStorage({
     },
     filename: function(req, file, cb) {
         if(file.fieldname === 'blogImage1') {
-            cb(null, req.body.category+'-'+Date.now()+path.extname(file.originalname))
+            cb(null, req.body.category+'-'+req.user.number+'-'+Date.now()+path.extname(file.originalname))
         }
         if(file.fieldname === 'blogImage2'){
-            cb(null, req.body.category+'-'+Date.now()+path.extname(file.originalname))
+            cb(null, req.body.category+'-'+req.user.number+'-'+Date.now()+path.extname(file.originalname))
         } 
     }
 })
